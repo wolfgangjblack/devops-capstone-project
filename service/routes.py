@@ -78,7 +78,7 @@ def list_accounts():
 # READ AN ACCOUNT
 ######################################################################
 @app.route("/accounts/<int:account_id>", methods=["GET"])
-def get_accounts(account):
+def get_accounts(account_id):
     """
     Reads an Account
     This endpoint will read an Account based on the account_id that is requested
