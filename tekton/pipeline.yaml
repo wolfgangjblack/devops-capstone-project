@@ -16,7 +16,6 @@ spec:
     - name: branch
       default: main
     - name: build-image
-
   tasks:
     - name: init
       workspaces:
@@ -73,7 +72,7 @@ spec:
           workspace: pipeline-workspace          
       taskRef:
         name: buildah
-        kind: ClusterTasks
+        kind: ClusterTask
       params:
       - name: IMAGE
         value: "$(params.build-image"
@@ -87,7 +86,7 @@ spec:
           workspace: pipeline-workspace          
       taskRef:
         name: openshift-client
-        kind: ClusterTasks
+        kind: ClusterTask
       params:
       - name: SCRIPT
         value: |
